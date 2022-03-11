@@ -20,5 +20,8 @@ jobs:
       - name: Build Container image
         run: docker build . --file Dockerfile --tag $IMAGE_NAME
 
-      - name: Log into GitHub Container Registry
+      - name: Log Toccken
         run: echo "${{ secrets.GITHUB_TOKEN }}"
+        
+       - name: Log Reponame
+        run: echo "${{ github.repository }}"  
