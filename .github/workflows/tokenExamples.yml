@@ -32,9 +32,8 @@ jobs:
           prerelease: false
   api:   
     runs-on: ubuntu-latest  
-    permissions:
+    permissions: 
       issues: write
-      packages: 
     steps:
       - name: Create issue using REST API
         run: |
