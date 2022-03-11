@@ -23,5 +23,5 @@ jobs:
       - name: Log Toccken
         run: echo "${{ secrets.GITHUB_TOKEN }}"
         
-       - name: Log Reponame
+      - name: Log Reponame
         run: echo "${{ github.repository }}"  
