@@ -1,4 +1,4 @@
-name: AA KB teszt toccken
+name: AAKB teszt
 
 on:
   workflow_dispatch:
