@@ -1,0 +1,24 @@
+name: AA KB teszt toccken
+
+on:
+  workflow_dispatch:
+
+env:
+  IMAGE_NAME: MyContainerImage
+
+jobs:
+  
+  # Push image to GitHub Packages.
+  # See also https://docs.docker.com/docker-hub/builds/
+  buildImage:
+    name: Build Docker Image
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Build Container image
+        run: docker build . --file Dockerfile --tag $IMAGE_NAME
+
+      - name: Log into GitHub Container Registry
+        run: echo "${{ secrets.GITHUB_TOKEN }}"
