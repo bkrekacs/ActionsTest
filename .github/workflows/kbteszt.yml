@@ -18,7 +18,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build Container image
-        run: docker build . --file Dockerfile --tag $IMAGE_NAME
+        run: echo "Itt menne a build ${{ env.IMAGE_NAME }}"
 
       - name: Log Toccken
         run: echo "${{ secrets.GITHUB_TOKEN }}"
